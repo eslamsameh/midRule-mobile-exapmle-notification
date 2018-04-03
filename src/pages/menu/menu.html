@@ -1,0 +1,42 @@
+<ion-menu [content]="content">
+    <ion-header>
+
+      <img src='../../assets/imgs/logo.png' style="padding:15px" />
+    </ion-header>
+
+    <ion-content   >
+      <ion-list  id="list" *ngFor="let p of pages"  >
+
+
+                <button id="listButton" ion-item menuClose  (click)="openPage(p)">
+                    <ion-icon item-start  [name]="p.icon" [color]="isActive(p)"></ion-icon>
+                    {{ p.title }}
+                  </button>
+
+      </ion-list>
+
+      <ion-list>
+        <ion-grid>
+          <ion-row>
+
+            <ion-col  col-11>
+                <p>  <ion-icon  id="icon" name="pin" >
+                  </ion-icon> {{Location}} </p>
+                  <p>  <ion-icon  id="icon"  name="call" >
+                    </ion-icon> {{Telephone}} </p>
+                  <p>  <ion-icon  id="icon"  name="mail" >
+                    </ion-icon> {{Email}} </p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+<div  id="divContactUs">
+  <button ion-button outline id="btnContactUs" (click)="OnPressLocation()" >
+    <ion-icon  id="icon" name="pin" ></ion-icon> Contact Us </button>
+</div>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- main navigation -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

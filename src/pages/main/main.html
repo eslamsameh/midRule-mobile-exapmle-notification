@@ -1,0 +1,121 @@
+<ion-header >
+    <ion-navbar >
+      <ion-buttons start>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>Home</ion-title>
+
+    </ion-navbar>
+  </ion-header>
+  <ion-content style="margin: 0px; padding: 0px;" >
+    <img src='../../assets/imgs/logo.png' />
+    <ion-card id="ionCard" >
+      <ion-card-header>
+        <h2 id="ionCardHeader">{{BriefHeader}}</h2>
+        <h2  id="ionCardHeader">{{Brief}}</h2>
+
+      </ion-card-header>
+      <ion-card-content>
+
+        <h6 id="h6Content" > {{BriefContent}} </h6>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+       <div>
+        <button id="btnContentAboutUs" small ion-button > About Us</button>
+       </div>
+
+
+
+
+
+
+      </ion-card-content>
+    </ion-card>
+    <ion-grid>
+      <ion-row  id="rowButtons">
+        <ion-col id="colButtonsService" col-4 >
+            <ion-icon id="iconButtonCol"  name="construct"></ion-icon>
+          <button id="colButtons" ion-button color="light" outline full >
+            Services</button>
+        </ion-col>
+        <ion-col id="colButtonCantactUs" col-4 >
+            <ion-icon id="iconButtonCol" name="mail"></ion-icon>
+          <button id="colButtons" ion-button color="light" outline full >
+            Contact Us</button>
+        </ion-col>
+        <ion-col id="colButtonAbout" col-4 >
+            <ion-icon  id="iconButtonCol"  name="alert"></ion-icon>
+          <button id="colButtons" ion-button color="light" outline full >
+            About </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-card id="ionCardConnectNow">
+
+      <ion-card-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-1></ion-col>
+      <ion-col col-10>
+        <button id="ColButtonConnectNow"  ion-button full outline small color="light">
+          <ion-icon id="iconConnectNow"  name="call">
+
+          </ion-icon>
+
+          Contact Us
+
+        </button>
+      </ion-col>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+      </ion-card-content>
+
+
+    </ion-card>
+
+    <ion-grid>
+      <ion-row>
+        <h4  id="h4Row"> Our Address</h4>
+        <ion-col id="ionColendOfPage" col-1  >
+
+        </ion-col>
+        <ion-col id="ionColaddress" col-11 >
+
+          <p id="pEndOfPage" >
+            {{address}}
+          </p>
+
+          <p id="pEndOfPage" >
+            <ion-icon id="iconEndOfPage"  name="pin">
+            </ion-icon> {{Location}} </p>
+          <p id="pEndOfPage">
+            <ion-icon id="iconEndOfPage"  name="call">
+            </ion-icon> {{Telephone}} </p>
+          <p id="pEndOfPage">
+            <ion-icon id="iconEndOfPage"   name="mail">
+            </ion-icon> {{Email}} </p>
+
+
+        </ion-col>
+
+      </ion-row>
+      <div  id="divLocation" >
+        <button id="buttonLocation" ion-button outline full (click)="OnPressLocation()" >
+          <ion-icon id="iconEndOfPage"  name="pin"></ion-icon> Location </button>
+      </div>
+       </ion-grid>
+
+  </ion-content>

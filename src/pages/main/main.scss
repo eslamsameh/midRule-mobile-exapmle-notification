@@ -1,0 +1,104 @@
+page-main{
+  #ionCard{
+    margin-bottom: 0px;
+    margin-left: 0px;
+     margin-right: 0px;
+     width:100%;
+     background-size: cover  ;
+     background-image: url('../../assets/imgs/background.png' );
+  }
+  #h6Content{
+    color:white;
+    font-size: 10px;
+  }
+  #ionCardHeader{
+    color:white
+  }
+
+  #divLocation{
+    display:flex;
+    justify-content: center;
+    margin: 10px;
+
+  }
+  #btnContentAboutUs{
+    border-radius: 15px;
+     align-items: center;
+     color: rgb(1, 37, 51);
+    background-color: white;
+    text-transform: none;
+    font-size:1.3rem;
+     font-family: Raleway-Regular
+     ;width: 40%;
+     height: 30px;
+  }
+  #rowButtons{
+    padding-top: 10px;
+
+  }
+  #colButtonsService{
+    text-align: center;
+     padding:1px
+  }
+  #iconButtonCol{
+    padding:1px;
+    margin-right: 10px;
+    color:rgb(1, 37, 51);
+    font-size: 20px;
+  }
+  #colButtons{
+    text-transform: none
+    ; border-bottom-color: white;
+    border-top-color: white;
+    font-size:13px;
+     margin-Top: 0px;
+      align-items: center;
+       color:rgb(1, 37, 51);
+       font-family: Raleway-Regular;
+
+
+  }
+  #colButtonCantactUs{
+    padding:1px;
+    border-left:1px solid rgb(1, 37, 51) ;
+    text-align: center;padding:1px
+  }
+  #colButtonAbout{
+    padding:1px; border-left:1px solid rgb(1, 37, 51) ;text-align: center;padding:1px
+  }
+  #ionCardConnectNow{
+    margin-top:0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;width:100%;background-size: cover  ;background-image: url('../../assets/imgs/connect.png' );
+  }
+  #ColButtonConnectNow{
+    border-radius: 30px; align-self: center;text-align: center ;font-family: Raleway-Regular;
+    text-transform: none;
+  }
+  #iconConnectNow{
+    margin-right: 10px
+  }
+  #h4Row{
+    color:rgb(1, 37, 51);margin-bottom: 0px; font-family:Raleway-Regular
+  }
+  #ionColendOfPage{
+    margin-top: 0px;margin-bottom: 0px;
+  }
+  #ionColaddress{
+    margin-top: 0px;
+
+  }
+
+  #pEndOfPage{
+    font-size: 11px; font-family: Raleway-Bold;color: rgb(1, 37, 51);
+    white-space:inherit;
+
+  }
+  #iconEndOfPage{
+    margin-right: 10px
+  }
+  #buttonLocation{
+    height: 30px;width: 75%; color:rgb(1, 37, 51);
+    font-family: Raleway-Bold; text-transform: none;border-radius: 30px;
+    ; border-color: rgb(1, 37, 51)
+  }
+
+}

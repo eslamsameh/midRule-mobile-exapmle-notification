@@ -1,0 +1,87 @@
+<ion-header>
+    <ion-navbar>
+      <ion-buttons start>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      </ion-buttons>
+      <ion-title>About</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content style="flex: 1" >
+   <ion-card style=" margin-left: 0px; margin-right: 0px;width:100%; background-color: #42AEE2" >
+     <ion-card-header>
+<h2 style="color:white;" >About Us</h2>
+     </ion-card-header>
+     <ion-card-content>
+        <h2 style="color:white;" >{{about}} </h2>
+     </ion-card-content >
+   </ion-card>
+   <h4 style="text-align-last: center">Popular Products</h4>
+   <ion-grid>
+     <ion-row>
+       <ion-col col-6>
+          <ion-card style=" margin-left: 0px; margin-right: 0px;width:100%; background-color: rgb(161, 201, 218)" >
+            <ion-card-header>
+              <h2 style="color:white;">{{proname1}}</h2>
+            </ion-card-header>
+           <ion-card-content>
+
+             <h6 style="color:white;">{{proContent1}}</h6>
+           </ion-card-content>
+
+         </ion-card>
+       </ion-col>
+       <ion-col col-6>
+          <ion-card style=" margin-left: 0px; margin-right: 0px;width:100%; background-color: rgb(191, 196, 148)" >
+              <ion-card-header>
+                <h2 style="color:white;">{{proname2}}</h2>
+              </ion-card-header>
+             <ion-card-content>
+
+               <h6 style="color:white;">{{proContent2}}</h6>
+             </ion-card-content>
+
+           </ion-card>
+       </ion-col>
+
+     </ion-row>
+     <ion-row>
+       <ion-col col-6>
+          <ion-card style=" margin-left: 0px; margin-right: 0px;width:100%; background-color:rgb(145, 105, 105);" >
+              <ion-card-header>
+                <h2 style="color:white;">{{proname3}}</h2>
+              </ion-card-header>
+             <ion-card-content>
+
+               <h6 style="color:white;">{{proContent3}}</h6>
+             </ion-card-content>
+
+           </ion-card>
+       </ion-col>
+       <ion-col col-6>
+          <ion-card style=" margin-left: 0px; margin-right: 0px;width:100%; background-color:rgb(144, 218, 208);" >
+              <ion-card-header>
+                <h2 style="color:white;">{{proname4}}</h2>
+              </ion-card-header>
+             <ion-card-content>
+
+               <h6 style="color:white;">{{proContent4}}</h6>
+             </ion-card-content>
+
+           </ion-card>
+        </ion-col>
+
+     </ion-row>
+     <ion-row>
+<ion-col col-4></ion-col>
+       <ion-col col-8>
+          <button   style="text-align: center"ion-button color="dark" (click)="OnPressPortfolio()" >Portfolio</button>
+       </ion-col>
+     </ion-row>
+
+   </ion-grid>
+
+  </ion-content>
+

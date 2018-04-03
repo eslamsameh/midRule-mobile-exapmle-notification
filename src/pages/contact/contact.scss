@@ -1,0 +1,49 @@
+page-contact {
+  #ionCard{
+    margin-bottom: 0px;
+    margin-top: 0px;
+     margin-left: 0px;
+     margin-right: 0px;
+    width:100%;
+    background-size: cover  ;
+     background-image: url('../../assets/imgs/background.png' );
+  }
+  #h2Header{
+    color:white
+  }
+  #h6Content{
+    color:white; font-size: 10px;
+  }
+  #divLocation{
+    display: flex;justify-content: center; margin: 10px;
+  }
+  #BtnDiv{
+    border-radius: 15px; align-items: center;
+    color: rgb(1, 37, 51);
+    background-color: white;
+    text-transform: none;
+    font-size:1.3rem;
+     font-family: Raleway-Regular
+     ;width: 50%;height: 30px
+  }
+  #icon{
+    margin-right: 10px;
+  }
+  #h4Row{
+    color:rgb(1, 37, 51);opacity: .75;
+     margin-bottom: 0px;
+      font-family:Raleway-Regular
+  }
+  #colempty{
+    margin-top: 0px;margin-bottom: 0px;
+  }
+  #coladdress{
+    margin-top: 0px;
+  }
+  #pEndOfPage{
+    font-size: 11px;
+     font-family: Raleway-Bold;
+     color: rgb(1, 37, 51)
+  }
+
+  }
