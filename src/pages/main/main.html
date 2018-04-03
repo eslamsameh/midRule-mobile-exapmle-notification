@@ -28,7 +28,7 @@
           </ion-row>
         </ion-grid>
        <div>
-        <button id="btnContentAboutUs" small ion-button > About Us</button>
+        <button id="btnContentAboutUs" small ion-button (click)="OnPressAbout()" > About Us</button>
        </div>
 
 
@@ -42,16 +42,16 @@
       <ion-row  id="rowButtons">
         <ion-col id="colButtonsService" col-4 >
             <ion-icon id="iconButtonCol"  name="construct"></ion-icon>
-          <button id="colButtons" ion-button color="light" outline full >
+          <button (click)="OnPressService()" id="colButtons" ion-button color="light" outline full >
             Services</button>
         </ion-col>
         <ion-col id="colButtonCantactUs" col-4 >
             <ion-icon id="iconButtonCol" name="mail"></ion-icon>
-          <button id="colButtons" ion-button color="light" outline full >
+          <button (click)="OnPressContactUs()" id="colButtons" ion-button color="light" outline full >
             Contact Us</button>
         </ion-col>
         <ion-col id="colButtonAbout" col-4 >
-            <ion-icon  id="iconButtonCol"  name="alert"></ion-icon>
+            <ion-icon (click)="OnPressAboutinGrid()"  id="iconButtonCol"  name="alert"></ion-icon>
           <button id="colButtons" ion-button color="light" outline full >
             About </button>
         </ion-col>
@@ -67,12 +67,12 @@
     <ion-row>
       <ion-col col-1></ion-col>
       <ion-col col-10>
-        <button id="ColButtonConnectNow"  ion-button full outline small color="light">
-          <ion-icon id="iconConnectNow"  name="call">
+        <button (click)="OnPressSendMessage()" id="ColButtonConnectNow"  ion-button full outline small color="light">
+          <ion-icon id="iconConnectNow"  name="ios-chatbubbles">
 
           </ion-icon>
 
-          Contact Us
+       Send Message
 
         </button>
       </ion-col>
@@ -113,7 +113,7 @@
 
       </ion-row>
       <div  id="divLocation" >
-        <button id="buttonLocation" ion-button outline full (click)="OnPressLocation()" >
+        <button  id="buttonLocation" ion-button outline full (click)="OnPressLocation()" >
           <ion-icon id="iconEndOfPage"  name="pin"></ion-icon> Location </button>
       </div>
        </ion-grid>

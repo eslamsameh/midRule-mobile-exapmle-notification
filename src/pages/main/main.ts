@@ -2,6 +2,10 @@ import { Component ,OnInit} from '@angular/core';
 import { IonicPage, NavController, NavParams ,MenuController} from 'ionic-angular';
 import {JsonService} from '../JsonService/JsonService'
 import { MapPage } from '../map/map';
+import { AboutPage} from '../about/about'
+import {ServicesPage}from '../services/services'
+import {ContactPage} from '../contact/contact'
+import {SendMessagePage} from '../send-message/send-message'
 /**
  * Generated class for the MainPage page.
  *
@@ -48,5 +52,21 @@ this.ds.FileMain().subscribe((resp)=>{
 OnPressLocation()
 {
 this.navCtrl.setRoot(MapPage);
+}
+OnPressAbout(){
+  this.navCtrl.setRoot(AboutPage);
+}
+OnPressService(){
+this.navCtrl.setRoot(ServicesPage);
+}
+OnPressContactUs(){
+  this.navCtrl.setRoot(ContactPage)
+}
+OnPressAboutinGrid(){
+  this.navCtrl.setRoot(AboutPage);
+}
+OnPressSendMessage(){
+  this .navCtrl.setRoot(SendMessagePage);
+
 }
 }

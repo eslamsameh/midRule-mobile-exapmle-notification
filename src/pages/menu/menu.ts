@@ -9,6 +9,7 @@ import { MainPage } from "../main/main";
 import { JsonService } from "../JsonService/JsonService";
 import {MapPage} from '../map/map'
 import { App } from 'ionic-angular/components/app/app';
+import {SendMessagePage} from '../send-message/send-message'
 
 export interface PageInterface {
   title: string;
@@ -115,7 +116,7 @@ this.pageIndex=page.index
   OnPressLocation(){
 
 
-this.nav.setRoot(MapPage);
+this.nav.setRoot(SendMessagePage);
 this.menuCtrl.close();
 debugger;
   }

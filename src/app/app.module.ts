@@ -8,14 +8,18 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {MenuPage}from '../pages/menu/menu';
 import {MapPage} from '../pages/map/map'
+import {AboutPage } from '../pages/about/about'
+import{ServicesPage} from '../pages/services/services'
 import {PortfolioPage} from '../pages/portfolio/portfolio'
+import {ContactPage} from '../pages/contact/contact'
+import {SendMessagePage } from '../pages/send-message/send-message'
 import {JsonService} from '../pages/JsonService/JsonService'
 import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    MenuPage,MapPage,
+    MenuPage,MapPage,AboutPage,ServicesPage,ContactPage,SendMessagePage
   ],
   imports: [
     BrowserModule,HttpModule,
@@ -25,7 +29,7 @@ import { HttpModule } from '@angular/http';
   entryComponents: [
     MyApp,
     HomePage,
-    MenuPage,MapPage,
+    MenuPage,MapPage,AboutPage,ServicesPage,ContactPage,SendMessagePage
   ],
   providers: [
     StatusBar,

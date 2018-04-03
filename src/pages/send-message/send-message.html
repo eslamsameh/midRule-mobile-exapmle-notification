@@ -1,0 +1,46 @@
+<!--
+  Generated template for the SendMessagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header  >
+    <ion-navbar  style="color: rgb(153, 149, 149);" >
+      <ion-buttons start>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>Send Message</ion-title>
+
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content style="background-color: rgb(240, 239, 239); font-family: Raleway-Bold" padding>
+  <h6 style="font-size: 14px; color: rgb(1, 37, 51); ">Name</h6>
+  <ion-input style="background-color: white; height: 35px;
+  width: 275px;" type="text" ></ion-input>
+  <h6 style="font-size: 14px; color: rgb(1, 37, 51);">Email</h6>
+  <ion-input style="background-color: white; height: 35px;
+  width: 275px;" type="text" ></ion-input>
+  <h6 style="font-size: 14px; color: rgb(1, 37, 51);">Phone</h6>
+  <ion-input style="background-color: white; height: 35px;
+  width: 275px;" type="text" ></ion-input>
+  <h6 style="font-size: 14px; color: rgb(1, 37, 51);">Job Title</h6>
+  <ion-input style="background-color: white; height: 35px;
+  width: 275px;" type="text" ></ion-input>
+
+
+
+      <h6 style="font-size: 14px; color: rgb(1, 37, 51);">How We Can Help You</h6>
+      <textarea  #myInput id="myInput" rows="4"  maxLength="500" (keyup)="resize()" [(ngModel)]="myStuff"></textarea>
+
+<div style="display:flex;
+justify-content: center;
+margin: 10px;">
+  <button ion-button outline  style="color: rgb(1, 37, 51);border-radius: 30px;
+   border-color: rgb(1, 37, 51); height: 30px;width:180px; font-family: Raleway-Bold
+   ; text-transform: none; font-size: 18px; " > Send</button>
+</div>
+</ion-content>
