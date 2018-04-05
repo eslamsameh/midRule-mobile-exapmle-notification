@@ -17,12 +17,8 @@ export class ServicesPage {
   ServicesHeader:any;
   Service:any;
   ServiceContent:any;
-  firstTitle:any;
-  firstContent:any;
-  SecondTitle:any;
-  SecondContent:any;
-  ThirdTitle:any;
-  ThirdContent:any;
+
+  items:any;
   constructor(public navCtrl: NavController, public navParams: NavParams,public ds:JsonService) {
   }
 
@@ -33,12 +29,7 @@ this.ds.FileService().subscribe((resp)=>{
 
   this.ServiceContent=data.data.ServiceContent;
   this.ServicesHeader=data.data.ServicesHeader;
-  this.firstTitle=data.data.firstTitle;
-  this.firstContent=data.data.firstContent;
-  this.SecondTitle=data.data.SecondTitle;
-  this.SecondContent=data.data.SecondContent;
-  this.ThirdTitle=data.data.ThirdTitle;
-  this.ThirdContent=data.data.ThirdContent;
+  this.items=data.ServiceData
 })
 
   }

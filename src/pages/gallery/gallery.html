@@ -11,7 +11,7 @@
           <ion-icon name="menu"></ion-icon>
         </button>
       </ion-buttons>
-      <ion-title>Portfolio</ion-title>
+      <ion-title>Gallery</ion-title>
 
     </ion-navbar>
   </ion-header>
@@ -21,7 +21,7 @@
 
       <ion-card id="ionCard" >
          <div>
-            <ion-card-header >
+            <ion-card-header>
                 <h2 id="ionCardHeader">Some Word From The Futer</h2>
                 <h2  id="ionCardHeader">Some Word</h2>
               </ion-card-header>
@@ -34,17 +34,8 @@
 
 <ion-grid>
   <ion-row >
-    <ion-col  col-6>
-<ion-card >
-  <ion-card-header style="padding: 0px;" >
-<img style="height: 100px; width: 180px;" src="../../assets/imgs/background.png"/>
-  </ion-card-header>
-  <ion-card-content style="background-color: rgb(1, 37, 51); margin: 0px;" >
-<h6 style="margin: 0px; color: white">
-    fancy 3d1
-</h6>
-  </ion-card-content>
-</ion-card>
+    <ion-col  *ngFor="let x of images" col-6>
+<img style="height: 120px; width: 180px;" [src]=  x  />
     </ion-col>
 
 

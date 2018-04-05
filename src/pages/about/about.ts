@@ -16,15 +16,17 @@ import { JsonService}from '../JsonService/JsonService'
   templateUrl: 'about.html',
 })
 export class AboutPage {
-about:any;
-proname1:any;
-proname2:any;
-proname3:any;
-proname4:any;
-proContent1:any;
-proContent2:any;
-proContent3:any;
-proContent4:any;
+  AboutHeader:any;
+  AboutContent:any;
+AboutTitle:any;
+Mission:any;
+MissionContnet:any;
+VissionContent:any;
+Vission:any;
+items:any;
+data:any;
+cons:any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public ds:JsonService) {
   }
 
@@ -35,15 +37,15 @@ proContent4:any;
   ngOnInit(){
 this.ds.FileAbout().subscribe((resp)=>{
 let data=resp.json();
-this.about=data.data.About;
-this.proname1=data.data.Pro1;
-this.proname2=data.data.Pro2;
-this.proname3=data.data.Pro3;
-this.proname4=data.data.Pro4;
-this.proContent1=data.data.ProContent1;
-this.proContent2=data.data.ProContent2;
-this.proContent3=data.data.ProContent3;
-this.proContent4=data.data.ProContent4;
+this.AboutHeader=data.About.AboutHeader;
+this.AboutContent=data.About.AboutContent;
+this.AboutTitle=data.About.AboutTitle
+debugger;
+this.items=data.data;
+this.cons=data.data;
+
+
+
 
 })
   }

@@ -63,6 +63,7 @@ OnPressContactUs(){
   this.navCtrl.setRoot(ContactPage)
 }
 OnPressAboutinGrid(){
+  debugger
   this.navCtrl.setRoot(AboutPage);
 }
 OnPressSendMessage(){

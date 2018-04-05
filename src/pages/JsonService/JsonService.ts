@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import {Http,RequestOptions,Headers}from '@angular/http'
-
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class JsonService {
@@ -27,5 +27,14 @@ FileMap(){
 }
 FileService(){
   return this.http.get('../../assets/jsonFile/JsonFileService.json');
+}
+FileGallery(){
+  return this.http.get('assets/jsonFile/JsonFileGallery.json');
+}
+FileOffer(){
+  return this.http.get('../../assets/jsonFile/offer.json');
+}
+FileMenu(){
+  return this.http.get('../../assets/jsonFile/menu.json');
 }
 }

@@ -15,14 +15,20 @@ import {ContactPage} from '../pages/contact/contact'
 import {SendMessagePage } from '../pages/send-message/send-message'
 import {JsonService} from '../pages/JsonService/JsonService'
 import { HttpModule } from '@angular/http';
+import {AboutPageModule} from '../pages/about/about.module'
+import {ContactPageModule}from '../pages/contact/contact.module'
+import{GalleryPageModule}from '../pages/gallery/gallery.module'
+import {MainPageModule } from '../pages/main/main.module'
+import {ServicesPageModule}from '../pages/services/services.module'
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    MenuPage,MapPage,AboutPage,ServicesPage,ContactPage,SendMessagePage
+    MenuPage,MapPage,SendMessagePage
   ],
   imports: [
-    BrowserModule,HttpModule,
+    BrowserModule,HttpModule,AboutPageModule,ContactPageModule,GalleryPageModule,GalleryPageModule,ServicesPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

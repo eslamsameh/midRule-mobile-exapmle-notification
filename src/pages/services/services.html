@@ -11,7 +11,9 @@
 
   <ion-content id="ionContent"  >
 
-      <ion-card id="ionCardService" >
+      <ion-card style="display: flex;
+      align-items: center;height: 200px;" id="ionCardService" >
+        <div>
         <ion-card-header id="iconCardHeaderService" >
           <h2 id="H2ServiceHeader" >{{ServicesHeader}}</h2>
           <h2 id="h2Service" >{{Service}}</h2>
@@ -21,39 +23,20 @@
 
           <h6 id="h6ServiceContent" > {{ServiceContent}} </h6>
         </ion-card-content>
-      </ion-card>
-      <ion-card id="ionCardDetail"  >
+      </div>
+      </ion-card  >
+      <ion-card *ngFor="let x of items" id="ionCardDetail"  >
         <ion-card-header >
 
 <h2> <ion-icon id="iconH2InTitle" name="md-settings"
  >
-  </ion-icon>{{firstTitle}}</h2>
+  </ion-icon>{{x.Title}}</h2>
         </ion-card-header>
         <ion-card-content >
-<h6 id="H6ContentService" > {{firstContent}}</h6>
+<h6 id="H6ContentService" > {{x.Content}}</h6>
 
         </ion-card-content>
       </ion-card>
-      <ion-card >
-          <ion-card-header >
 
-  <h2> <ion-icon  id="iconH2InTitle"  name="ios-pie" >
-    </ion-icon> {{SecondTitle}}</h2>
-          </ion-card-header>
-          <ion-card-content>
-  <h6 id="H6ContentService" > {{SecondContent}}</h6>
-          </ion-card-content>
-        </ion-card>
-        <ion-card >
-            <ion-card-header >
-
-    <h2> <ion-icon   id="iconH2InTitle"  name="md-color-palette"  >
-      </ion-icon> {{ThirdTitle}}</h2>
-            </ion-card-header>
-            <ion-card-content>
-    <h6  id="H6ContentService" > {{ThirdContent}}</h6>
-
-            </ion-card-content>
-          </ion-card>
 
   </ion-content>

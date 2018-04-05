@@ -10,14 +10,10 @@ import { JsonService } from "../JsonService/JsonService";
 import {MapPage} from '../map/map'
 import { App } from 'ionic-angular/components/app/app';
 import {SendMessagePage} from '../send-message/send-message'
+import {GalleryPage} from '../gallery/gallery'
+import {OffersPage} from '../offers/offers'
 
-export interface PageInterface {
-  title: string;
-  pageName: string;
-  tabComponent?: any;
-  index?: number;
-  icon: string;
-}
+
 @IonicPage()
 @Component({
   selector: "page-menu",
@@ -32,39 +28,12 @@ export class MenuPage {
   Telephone: any;
   Email: any;
 pageIndex:any;
-  pages: PageInterface[] = [
-    {
-      title: "Home",
-      pageName: "MainPage",
-      tabComponent: "MainPage",
-      index: 0,
-      icon: "home"
-    },
-     { title: "Services", pageName: "ServicesPage", icon: "construct" },
-     {
-      title: "Contact",
-      pageName: "ContactPage",
-      tabComponent: "ContactPage",
-      index: 2,
-      icon: "call"
-    },
-    { title: "Portfolio", pageName: "PortfolioPage", icon: "md-photos" },
-    {
-      title: "About",
-      pageName: "AboutPage",
-      tabComponent: "AboutPage",
-      index: 1,
-      icon: "alert"
-    },
-
-
-
-  ];
+ pages:any;
 
   constructor(public navCtrl: NavController, public ds: JsonService,
      private viewCtrl: ViewController,private app:App,public menuCtrl: MenuController) {}
 
-  openPage(page: PageInterface) {
+  openPage(page) {
     let params = {};
 this.pageIndex=page.index
     // The index is equal to the order of our tabs inside tabs.ts
@@ -84,7 +53,8 @@ this.pageIndex=page.index
 
   }
 
-  isActive(page: PageInterface) {
+  isActive(page) {
+    debugger
     // Again the Tabs Navigation
     let childNav = this.nav.getActiveChildNav();
 
@@ -112,6 +82,10 @@ this.pageIndex=page.index
       this.Email = data.data.Email;
 
     });
+    this.ds.FileMenu().subscribe((Resp)=>{
+      let data =Resp.json();
+      this.pages=data.data;
+    })
   }
   OnPressLocation(){
 

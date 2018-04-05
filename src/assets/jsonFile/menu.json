@@ -1,0 +1,31 @@
+{"data":[
+  {
+    "title": "Home",
+    "pageName": "MainPage",
+    "tabComponent": "MainPage",
+    "index": 0,
+    "icon": "home"
+  },
+   { "title": "Services", "pageName": "ServicesPage", "icon": "construct" },
+   {
+    "title": "Contact",
+    "pageName": "ContactPage",
+    "tabComponent": "ContactPage",
+    "index": 2,
+    "icon": "call"
+  },
+  { "title": "Gallery", "pageName": "GalleryPage", "icon": "md-photos" },
+  { "title": "Portfolio", "pageName": "PortfolioPage", "icon": "bookmarks" },
+  { "title": "Offers", "pageName": "OffersPage", "icon": "logo-usd" },
+  {
+    "title": "About",
+    "pageName": "AboutPage",
+    "tabComponent": "AboutPage",
+    "index": 1,
+    "icon": "alert"
+  }
+
+
+
+]
+}
