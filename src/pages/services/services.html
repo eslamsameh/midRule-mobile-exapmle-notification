@@ -1,42 +1,56 @@
 <ion-header>
-    <ion-navbar>
+
+  <ion-toolbar hideBackButton>
+      <ion-title>{{ServicesTitle}}</ion-title>
       <ion-buttons start>
-        <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      </ion-buttons>
-      <ion-title>Services</ion-title>
-    </ion-navbar>
-  </ion-header>
+          <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        </ion-buttons>
+</ion-toolbar>
 
-  <ion-content id="ionContent"  >
 
-      <ion-card style="display: flex;
+
+
+</ion-header>
+  <ion-content [style.backgroundColor]="BackGroundColor" id="ionContent"  >
+
+      <ion-card [ngStyle]="{'background-image':'url(' + dataImage + ')'}" style="display: flex;
       align-items: center;height: 200px;" id="ionCardService" >
-        <div>
+        <div >
         <ion-card-header id="iconCardHeaderService" >
-          <h2 id="H2ServiceHeader" >{{ServicesHeader}}</h2>
-          <h2 id="h2Service" >{{Service}}</h2>
+          <h2 [style.color]="ColorData" id="H2ServiceHeader" >{{ServicesHeader}}</h2>
+          <h2  [style.color]="ColorData" id="h2Service" >{{Service}}</h2>
 
         </ion-card-header>
         <ion-card-content id="ionCardConent" >
 
-          <h6 id="h6ServiceContent" > {{ServiceContent}} </h6>
+          <h6 [style.color]="ColorData" id="h6ServiceContent" > {{ServiceContent}} </h6>
         </ion-card-content>
       </div>
-      </ion-card  >
-      <ion-card *ngFor="let x of items" id="ionCardDetail"  >
-        <ion-card-header >
 
-<h2> <ion-icon id="iconH2InTitle" name="md-settings"
+      </ion-card  >
+      <div style="margin-bottom: 30px;">
+      <ion-card *ngFor="let x of items" id="ionCardDetail"  >
+        <ion-card-header  >
+
+<h2 [style.color]="x.colorTitle"> <ion-icon [style.color]="x.iconColor" id="iconH2InTitle" name="{{x.icon}}"
  >
   </ion-icon>{{x.Title}}</h2>
         </ion-card-header>
         <ion-card-content >
-<h6 id="H6ContentService" > {{x.Content}}</h6>
+<ul style="margin: 0px;
+padding: 0px;list-style-type:none" >
+  <li *ngFor="let z of x.Content" >
+
+      <h6 [style.color]="x.colorContent" id="H6ContentService" >{{z}} </h6>
+  </li>
+</ul>
+
+
 
         </ion-card-content>
       </ion-card>
 
-
+    </div>
   </ion-content>

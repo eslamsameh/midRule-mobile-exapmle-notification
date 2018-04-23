@@ -1,31 +1,37 @@
 page-portfolio {
-  #ionCard{
-    margin-bottom: 0px;
-    margin-top: 0px;
-     margin-left: 0px;
-     margin-right: 0px;
-    width:100%;
-    background-size: cover  ;
-     background-image: url('../../assets/imgs/background.png' );
-     display: flex;
-     align-items: center;height: 200px;
-  }
-  #ionCardHeader{
-    color:white
-  }
-  #h6Content{
-    color:white; font-size: 10px;
-  }
-  #ionCardConent{
-    margin-top: 0px;
-  }
-  #ButtonShowMore{
-    color:rgb(1, 37, 51); border-color: rgb(1, 37, 51);
-    border-radius: 40px;
-    text-transform: none;
-     height: 30px;width: 150px;
-     font-family: Raleway-Bold;
-     font-size: 13px;
+
+
+    #ionCard{
+      margin-bottom: 0px;
+      margin-top: 0px;
+       margin-left: 0px;
+       margin-right: 0px;
+      width:100%;
+      background-size: cover  ;
+
+       display: flex;
+       align-items: center;height: 200px;
+    }
+    #ionCardHeader{
+
+    }
+    #h6Content{
+       font-size: 10px;
+    }
+    #ionCardConent{
+      margin-top: 0px;
+    }
+    #ButtonShowMore{
+
+      border-radius: 40px;
+      text-transform: none;
+       height: 30px;width: 150px;
+       font-family: Raleway-Bold;
+       font-size: 13px;
+    }
   }
 
-}
+
+
+
+

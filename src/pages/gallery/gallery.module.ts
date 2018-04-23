@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { GalleryPage } from './gallery';
 
+
 @NgModule({
   declarations: [
     GalleryPage,
@@ -9,5 +10,6 @@ import { GalleryPage } from './gallery';
   imports: [
     IonicPageModule.forChild(GalleryPage),
   ],
+ 
 })
 export class GalleryPageModule {}

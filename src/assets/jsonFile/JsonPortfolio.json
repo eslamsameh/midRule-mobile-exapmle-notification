@@ -1,13 +1,88 @@
-{"data":{
-  "Portfolio":"Portfolio",
-  "Check":"Check Our Work",
-  "Pro1":"fancy 3d1",
-  "Pro2":"fancy 3d2",
-  "Pro3":"fancy 3d3",
-  "Pro4":"fancy 3d4",
-  "ProContent1":"fancy 3d",
-  "ProContent2":"fancy 3d",
-  "ProContent3":"fancy 3d",
-  "ProContent4":"fancy 3d"
-}
-}
+{"data":[
+
+    {"image": "assets/imgs/background.png",
+      "CardContent":"test app test app",
+      "CardContentColor":"rgb(96, 158, 238)",
+      "WordContentColor":"white",
+      "colorContent":"rgb(114, 112, 112)"
+    },
+    {"image": "assets/imgs/background.png",
+      "CardContent":"test app test app",
+      "CardContentColor":"rgb(96, 158, 238)",
+      "WordContentColor":"white",
+      "colorContent":"rgb(114, 112, 112)"
+    },{
+      "image": "assets/imgs/background.png",
+      "CardContent":"test app test app",
+      "CardContentColor":"rgb(96, 158, 238)",
+      "WordContentColor":"white",
+      "colorContent":"rgb(114, 112, 112)"
+    },{
+      "image": "assets/imgs/background.png",
+      "CardContent":"test app test app",
+      "CardContentColor":"rgb(96, 158, 238)",
+      "WordContentColor":"white",
+      "colorContent":"rgb(114, 112, 112)"
+    },{
+      "image": "assets/imgs/background.png",
+      "CardContent":"test app test app",
+      "CardContentColor":"rgb(96, 158, 238)",
+      "WordContentColor":"white",
+      "colorContent":"rgb(114, 112, 112)"
+    },{
+      "image": "assets/imgs/background.png",
+      "CardContent":"test app test app",
+      "CardContentColor":"rgb(96, 158, 238)",
+      "WordContentColor":"white",
+      "colorContent":"rgb(114, 112, 112)"
+    },{
+      "image": "assets/imgs/background.png",
+      "CardContent":"test app test app",
+      "CardContentColor":"rgb(96, 158, 238)",
+      "WordContentColor":"white",
+      "colorContent":"rgb(114, 112, 112)"
+    },{
+      "image": "assets/imgs/background.png",
+      "CardContent":"test app test app",
+      "CardContentColor":"rgb(96, 158, 238)",
+      "WordContentColor":"white",
+      "colorContent":"rgb(114, 112, 112)"
+    },{
+      "image": "assets/imgs/background.png",
+      "CardContent":"test app test app",
+      "CardContentColor":"rgb(96, 158, 238)",
+      "WordContentColor":"white",
+      "colorContent":"rgb(114, 112, 112)"
+    },{
+      "image": "assets/imgs/background.png",
+      "CardContent":"test app test app",
+      "CardContentColor":"rgb(96, 158, 238)",
+      "WordContentColor":"white",
+      "colorContent":"rgb(114, 112, 112)"
+    },{
+      "image": "assets/imgs/background.png",
+      "CardContent":"test app test app",
+      "CardContentColor":"rgb(96, 158, 238)",
+      "WordContentColor":"white",
+      "colorContent":"rgb(114, 112, 112)"
+    }
+
+
+  ],
+
+    "Portfolio":{"PortfolioTitle":"Some Words From The Futer",
+      "Portfolio":"Portfolio",
+      "imageCard":"assets/imgs/background.png",
+  "PortfolioHeader":"Some Words",
+  "PortfolioContent":"Any Words Any Words Any Words Any Words Any Words Any Words Any Words Any Words Any Words ",
+  "colorwordsPortfolio":"white",
+  "BackgroundColor":"rgb(228, 226, 226)",
+  "ShowMoreColor":"rgb(1, 37, 51)",
+  "ShowMoreBorderColor":"rgb(1, 37, 51)"
+
+
+  }
+
+
+  }
+

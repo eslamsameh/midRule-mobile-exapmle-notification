@@ -1,17 +1,30 @@
 <ion-menu [content]="content">
+
     <ion-header>
 
-      <img src='../../assets/imgs/logo.png' style="padding:15px" />
+      <img src='assets/imgs/logo.png' style="padding:15px" />
+
     </ion-header>
 
-    <ion-content   >
-      <ion-list  id="list" *ngFor="let p of pages"  >
+    <ion-content>
+
+      <ion-list  id="list" *ngFor="let p of pages"   >
 
 
-                <button id="listButton" ion-item menuClose  (click)="openPage(p)">
+                <button [style.color]="colorIconAndOutCard" id="listButton"  ion-item menuClose *ngIf="p.title!='Offers'" (click)="openPage(p)">
                     <ion-icon item-start  [name]="p.icon" [color]="isActive(p)"></ion-icon>
                     {{ p.title }}
                   </button>
+
+                  <h5 [style.color]="colorIconAndOutCard" id="listButton" style="padding-bottom: 7px; padding-left: 15px;" *ngIf="p.title=='Offers'" >
+                      <ion-icon item-start  style="margin-right: 30px; " [name]="p.icon" [color]="isActive(p)"></ion-icon>
+                      {{ p.title }} <ion-badge *ngIf="visable" style=" margin: 5px;  background-color:rgb(155, 9, 9); " item-end>{{newOffers}}
+                        </ion-badge>
+
+                        <Menu-Offers (valueChange)='displayCounter($event)'
+                         *ngIf="p.title=='Offers'" [dataSource]="p" ></Menu-Offers>
+
+                      </h5>
 
       </ion-list>
 
@@ -20,22 +33,29 @@
           <ion-row>
 
             <ion-col  col-11>
-                <p>  <ion-icon  id="icon" name="pin" >
-                  </ion-icon> {{Location}} </p>
-                  <p>  <ion-icon  id="icon"  name="call" >
-                    </ion-icon> {{Telephone}} </p>
-                  <p>  <ion-icon  id="icon"  name="mail" >
-                    </ion-icon> {{Email}} </p>
+
+          <p [style.color]="colorIconAndOutCard" id="pEndOfPage" >
+            <ion-icon [style.color]="colorIconAndOutCard" id="icon"  name="{{iconLocation}}">
+            </ion-icon> {{Location}} </p>
+          <p [style.color]="colorIconAndOutCard" id="pEndOfPage">
+            <ion-icon [style.color]="colorIconAndOutCard" id="icon"  name="{{iconTelephone}}">
+            </ion-icon> {{Telephone}} </p>
+          <p [style.color]="colorIconAndOutCard" id="pEndOfPage">
+            <ion-icon [style.color]="colorIconAndOutCard" id="icon"   name="{{iconEmail}}">
+            </ion-icon> {{Email}} </p>
             </ion-col>
           </ion-row>
         </ion-grid>
 <div  id="divContactUs">
-  <button ion-button outline id="btnContactUs" (click)="OnPressLocation()" >
-    <ion-icon  id="icon" name="ios-chatbubbles" ></ion-icon> Send Message </button>
+  <button [style.color]="colorIconAndOutCard" [style.border-color]="colorIconAndOutCard" ion-button outline id="btnContactUs" (click)="OnPressLocation()" >
+    <ion-icon  [style.color]="colorIconAndOutCard" id="icon" name="{{SendMessageIcon}}" ></ion-icon> {{SendMessageButton}} </button>
 </div>
+<h3>{{lat}}</h3>
+<h3>{{lng}}</h3>
 
       </ion-list>
     </ion-content>
+
   </ion-menu>
 
   <!-- main navigation -->

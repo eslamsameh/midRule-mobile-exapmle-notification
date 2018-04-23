@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams ,LoadingController} from 'ionic-angular';
 import {PortfolioPage} from '../portfolio/portfolio'
-import { JsonService}from '../JsonService/JsonService'
+import {AboutService} from './AboutService'
 
 /**
  * Generated class for the AboutPage page.
@@ -25,28 +25,38 @@ VissionContent:any;
 Vission:any;
 items:any;
 data:any;
-cons:any;
+About:any;
+BackgroundColor:any;
+colorwordsAbout:any;
+iconColor:any;
+colorContent:any;
+icon:any;
+image:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public ds:JsonService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public ds:AboutService,
+    public loadingCtrl:LoadingController ) {
   }
 
 
-  OnPressPortfolio(){
-    this.navCtrl.setRoot(PortfolioPage);
-  }
   ngOnInit(){
+    let loading = this.loadingCtrl.create({content : "please wait..."});
+    loading.present();
 this.ds.FileAbout().subscribe((resp)=>{
 let data=resp.json();
 this.AboutHeader=data.About.AboutHeader;
 this.AboutContent=data.About.AboutContent;
 this.AboutTitle=data.About.AboutTitle
-debugger;
+
 this.items=data.data;
-this.cons=data.data;
-
-
-
+this.About=data.About.About;
+this.BackgroundColor=data.About.BackgroundColor;
+this.iconColor=data.data.iconColor
+this.colorwordsAbout=data.About.colorwordsAbout;
+this.colorContent=data.data.colorContent;
+this.icon=data.data.icon;
+this.image=data.About.image;
 
 })
+loading.dismiss();
   }
 }

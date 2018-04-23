@@ -2,21 +2,41 @@
   "ServiceData":[
 
       {"Title": "Web and Mobile Development",
+        "icon":"md-settings",
+        "iconColor":"rgb(96, 158, 238)",
+        "colorTitle":"black",
+        "colorContent":"rgb(114, 112, 112)",
+
         "Content":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur voluptatibus nesciunt, est alias deleniti ipsum fuga ullam maxime repudiandae neque, ad. Maiores quis atque, culpa rem inventore vero amet praesentium, quam sint, magnam reprehenderit doloremque."},
+
       {"Title": "Digital Marketing",
+        "icon":"pie",
+        "iconColor":"rgb(96, 158, 238)",
+        "colorTitle":"black",
+        "colorContent":"rgb(114, 112, 112)",
         "Content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur voluptatibus nesciunt, est alias deleniti ipsum fuga ullam maxime repudiandae neque, ad. Maiores quis atque, culpa rem inventore vero amet praesentium, quam sint, magnam reprehenderit doloremque."},
+
         {"Title": "Graphic Design",
+          "icon":"color-palette",
+          "iconColor":"rgb(96, 158, 238)",
+          "colorTitle":"black",
+          "colorContent":"rgb(114, 112, 112)",
+
           "Content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur voluptatibus nesciunt, est alias deleniti ipsum fuga ullam maxime repudiandae neque, ad. Maiores quis atque, culpa rem inventore vero amet praesentium, quam sint, magnam reprehenderit doloremque."}
 
 
     ],
   "data": {
+    "BackGroundColor":"rgb(228, 226, 226)",
+    "ServicesTitle":"Services",
+    "dataImage":"assets/imgs/background.png",
 
     "ServicesHeader": "Some Word From the Futer",
     "Services": "Some Words",
     "ServiceContent":
-      "Any Words Any Words Any Words Any Words Any Words Any Words Any Words Any Words "
+      "Any Words Any Words Any Words Any Words Any Words Any Words Any Words Any Words ",
+      "ColorData":"white"
 
 
   }

@@ -9,5 +9,6 @@ import { ServicesPage } from './services';
   imports: [
     IonicPageModule.forChild(ServicesPage),
   ],
+ 
 })
 export class ServicesPageModule {}

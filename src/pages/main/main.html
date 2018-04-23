@@ -1,25 +1,37 @@
-<ion-header >
-    <ion-navbar >
+
+
+<ion-header>
+
+  <ion-toolbar hideBackButton>
+      <ion-title>{{Home}}</ion-title>
       <ion-buttons start>
-        <button ion-button menuToggle>
+          <button ion-button  menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-      </ion-buttons>
-      <ion-title>Home</ion-title>
+        </ion-buttons>
+  </ion-toolbar>
 
-    </ion-navbar>
-  </ion-header>
+
+
+    </ion-header>
+
   <ion-content style="margin: 0px; padding: 0px;" >
-    <img src='../../assets/imgs/logo.png' />
-    <ion-card id="ionCard" >
+
+
+
+    <div style="display:flex;justify-content: center;">
+    <img src={{Logo}} />
+  </div>
+
+    <ion-card [ngStyle]="{'background-image':'url(' + imageCard + ')'}" id="ionCard" >
       <ion-card-header>
-        <h2 id="ionCardHeader">{{BriefHeader}}</h2>
-        <h2  id="ionCardHeader">{{Brief}}</h2>
+        <h2 [style.color]="colorwhite" >{{BriefHeader}}</h2>
+        <h2  [style.color]="colorwhite" >{{Brief}}</h2>
 
       </ion-card-header>
       <ion-card-content>
 
-        <h6 id="h6Content" > {{BriefContent}} </h6>
+        <h6 [style.color]="colorwhite" id="h6Content" > {{BriefContent}} </h6>
         <ion-grid>
           <ion-row>
             <ion-col>
@@ -28,7 +40,8 @@
           </ion-row>
         </ion-grid>
        <div>
-        <button id="btnContentAboutUs" small ion-button (click)="OnPressAbout()" > About Us</button>
+        <button id="btnContentAboutUs"  [style.color]="colorIconAndOutCard" [style.backgroundColor]="colorwhite"
+         small ion-button (click)="OnPressAbout()" >{{ ButtonAboutInCard}}</button>
        </div>
 
 
@@ -40,26 +53,27 @@
     </ion-card>
     <ion-grid>
       <ion-row  id="rowButtons">
-        <ion-col id="colButtonsService" col-4 >
-            <ion-icon id="iconButtonCol"  name="construct"></ion-icon>
-          <button (click)="OnPressService()" id="colButtons" ion-button color="light" outline full >
-            Services</button>
+        <ion-col [style.color]="colorIconAndOutCard" id="colButtonsService" col-4 >
+            <ion-icon [style.color]="colorIconAndOutCard" id="iconButtonCol"  name={{IconService}}></ion-icon>
+          <button [style.color]="colorIconAndOutCard" (click)="OnPressService()" id="colButtons"
+           ion-button color="light" outline full >
+            {{ButtonServiceOutCard}}</button>
         </ion-col>
-        <ion-col id="colButtonCantactUs" col-4 >
-            <ion-icon id="iconButtonCol" name="mail"></ion-icon>
-          <button (click)="OnPressContactUs()" id="colButtons" ion-button color="light" outline full >
-            Contact Us</button>
+        <ion-col [style.border-left-color]="colorIconAndOutCard" id="colButtonCantactUs" col-4 >
+            <ion-icon [style.color]="colorIconAndOutCard" id="iconButtonCol" name={{IconContact}}></ion-icon>
+          <button [style.color]="colorIconAndOutCard" (click)="OnPressContactUs()" id="colButtons" ion-button color="light" outline full >
+            {{ButtonContactOutCard}}</button>
         </ion-col>
-        <ion-col id="colButtonAbout" col-4 >
-            <ion-icon   id="iconButtonCol"  name="alert"></ion-icon>
-          <button (click)="OnPressAboutinGrid()" id="colButtons" ion-button color="light" outline full >
-            About </button>
+        <ion-col [style.border-left-color]="colorIconAndOutCard" id="colButtonAbout" col-4 >
+            <ion-icon [style.color]="colorIconAndOutCard"  id="iconButtonCol"  name={{IconAbout}}></ion-icon>
+          <button [style.color]="colorIconAndOutCard" (click)="OnPressAboutinGrid()" id="colButtons" ion-button color="light" outline full >
+            {{ButtonAboutOutCard}} </button>
         </ion-col>
       </ion-row>
     </ion-grid>
 
 
-    <ion-card id="ionCardConnectNow">
+    <ion-card  [ngStyle]="{'background-image':'url(' + imageSendMessage + ')'}" id="ionCardConnectNow">
 
       <ion-card-content>
 
@@ -67,12 +81,12 @@
     <ion-row>
       <ion-col col-1></ion-col>
       <ion-col col-10>
-        <button (click)="OnPressSendMessage()" id="ColButtonConnectNow"  ion-button full outline small color="light">
-          <ion-icon id="iconConnectNow"  name="ios-chatbubbles">
+        <button (click)="OnPressSendMessage()" id="ColButtonConnectNow" [style.color]="colorwhite" ion-button full outline small color="light">
+          <ion-icon id="iconConnectNow"  [style.color]="colorwhite" name="{{SendMessageIcon}}">
 
           </ion-icon>
 
-       Send Message
+      {{SendMessageButton}}
 
         </button>
       </ion-col>
@@ -88,34 +102,37 @@
 
     <ion-grid>
       <ion-row>
-        <h4  id="h4Row"> Our Address</h4>
+        <h4 [style.color]="colorIconAndOutCard" id="h4Row"> {{OurAddress}}</h4>
         <ion-col id="ionColendOfPage" col-1  >
 
         </ion-col>
         <ion-col id="ionColaddress" col-11 >
 
-          <p id="pEndOfPage" >
+          <p  [style.color]="colorIconAndOutCard" id="pEndOfPage" >
             {{address}}
           </p>
 
-          <p id="pEndOfPage" >
-            <ion-icon id="iconEndOfPage"  name="pin">
+          <p [style.color]="colorIconAndOutCard" id="pEndOfPage" >
+            <ion-icon [style.color]="colorIconAndOutCard" id="iconEndOfPage"  name="{{iconLocation}}">
             </ion-icon> {{Location}} </p>
-          <p id="pEndOfPage">
-            <ion-icon id="iconEndOfPage"  name="call">
+          <p [style.color]="colorIconAndOutCard" id="pEndOfPage">
+            <ion-icon [style.color]="colorIconAndOutCard" id="iconEndOfPage"  name="{{iconTelephone}}">
             </ion-icon> {{Telephone}} </p>
-          <p id="pEndOfPage">
-            <ion-icon id="iconEndOfPage"   name="mail">
+          <p [style.color]="colorIconAndOutCard" id="pEndOfPage">
+            <ion-icon [style.color]="colorIconAndOutCard" id="iconEndOfPage"   name="{{iconEmail}}">
             </ion-icon> {{Email}} </p>
 
 
         </ion-col>
 
       </ion-row>
-      <div  id="divLocation" >
-        <button  id="buttonLocation" ion-button outline full (click)="OnPressLocation()" >
-          <ion-icon id="iconEndOfPage"  name="pin"></ion-icon> Location </button>
+      <div  id="divLocation" style="margin-bottom:25px;" >
+        <button  [style.color]="colorIconAndOutCard" [style.border-color]="colorIconAndOutCard"
+         id="buttonLocation" ion-button outline full (click)="OnPressLocation()" >
+          <ion-icon id="iconEndOfPage"
+           [style.color]="colorIconAndOutCard" name="{{iconLocation}}"></ion-icon> {{LocationBtn}} </button>
       </div>
        </ion-grid>
+       <button (click)="OnPressNotification()"></button>
 
   </ion-content>

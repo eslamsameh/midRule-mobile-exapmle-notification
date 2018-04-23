@@ -1,9 +1,10 @@
 page-menu {
   #listButton{
     border-bottom :1px solid ;
-    color:rgb(1, 37, 51) ;
+
     border-bottom-color: rgb(233, 229, 229);
      padding: 1px;
+     left:12px;
   }
   #list{
     margin-top: 0px; margin-bottom: 0px;
@@ -13,10 +14,10 @@ page-menu {
     font-weight: bold;
      vertical-align: middle;
     white-space:nowrap;
-    color:rgb(1, 37, 51) ;
+
   }
   #icon{
-    color:rgb(1, 37, 51) ;
+
     margin-right: 10px;
   }
   #divContactUs{
@@ -29,9 +30,10 @@ page-menu {
      text-transform: none;
      border-radius: 30px;
 
-    border-color: rgb(1, 37, 51) ;
+
     height: 30px; width: 90% ;
-    color: rgb(1, 37, 51) ;
+
     font-size: 14px;
   }
+
   }

@@ -1,40 +1,45 @@
+
 <ion-header>
-    <ion-navbar>
+
+  <ion-toolbar hideBackButton>
+      <ion-title>{{About}}</ion-title>
       <ion-buttons start>
-        <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      </ion-buttons>
-      <ion-title>About</ion-title>
-    </ion-navbar>
+          <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        </ion-buttons>
+  </ion-toolbar>
+
+
+
   </ion-header>
 
-  <ion-content id="ionContent"  >
+  <ion-content [style.backgroundColor]="BackgroundColor"  id="ionContent"  >
 
-      <ion-card style="display: flex;
+      <ion-card  [ngStyle]="{'background-image':'url(' + image + ')'}" style="display: flex;
       align-items: center;height: 200px;" id="ionCardService" >
         <div>
-        <ion-card-header id="iconCardHeaderService" >
-          <h2 id="H2ServiceHeader" >{{AboutTitle}}</h2>
-          <h2 id="h2Service" >{{AboutHeader}}</h2>
+        <ion-card-header   id="iconCardHeaderService" >
+          <h2 [style.color]="colorwordsAbout" id="H2ServiceHeader" >{{AboutTitle}}</h2>
+          <h2  [style.color]="colorwordsAbout" id="h2Service" >{{AboutHeader}}</h2>
 
         </ion-card-header>
         <ion-card-content id="ionCardConent" >
 
-          <h6 id="h6ServiceContent" > {{AboutContent}} </h6>
+          <h6 [style.color]="colorwordsAbout" id="h6ServiceContent" > {{AboutContent}} </h6>
         </ion-card-content>
       </div>
       </ion-card>
-      <div *ngFor="let x of items">
+      <div *ngFor="let x of items" style="margin-bottom: 30px;">
       <ion-card  id="ionCardDetail"  >
         <ion-card-header >
 
-<h2> <ion-icon id="iconH2InTitle" name="md-checkbox-outline"
+<h2> <ion-icon id="iconH2InTitle" name="{{x.icon}}" [style.color]="x.iconColor"
  >
   </ion-icon>{{x.Header}}</h2>
         </ion-card-header>
         <ion-card-content  >
-<h6 id="H6ContentService" > {{x.Contnet}}</h6>
+<h6 [style.color]="x.colorContent" id="H6ContentService"> {{x.Contnet}}</h6>
 
         </ion-card-content>
       </ion-card>

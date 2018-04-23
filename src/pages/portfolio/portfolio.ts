@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {JsonService} from '../JsonService/JsonService';
+import { IonicPage, NavController, NavParams,LoadingController } from 'ionic-angular';
+import {PortfolioService} from './Portfolio.Service';
+import * as _ from "lodash";
 
 /**
  * Generated class for the PortfolioPage page.
@@ -16,33 +17,87 @@ import {JsonService} from '../JsonService/JsonService';
 })
 export class PortfolioPage {
   Portfolio:any;
-  Check:any;
-  proname1:any;
-  proname2:any;
-  proname3:any;
-  proname4:any;
-  proContent1:any;
-  proContent2:any;
-  proContent3:any;
-  proContent4:any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public ds:JsonService) {
+  items:any;
+  PortfolioTitle:any;
+  PortfolioHeader:any;
+  PortfolioContent:any;
+  imageCard:any;
+  BackgroundColor:any;
+  colorwordsPortfolio:any;
+  ShowMoreColor:any;
+  ShowMoreBorderColor:any;
+  isValid:any =false;
+  results:any;
+  imagesBeforeSplit:any;
+  ChunkedImages:any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public ds:PortfolioService
+  ,public loadingCtrl:LoadingController ) {
   }
 
   ngOnInit(){
+    let loading = this.loadingCtrl.create({content : "please wait..."});
+    loading.present();
+
 this.ds.FilePortfolio().subscribe((resp)=>{
-  debugger;
+
   let data=resp.json();
-  this.Check=data.data.Check;
-  this.Portfolio=data.data.Portfolio;
-  this.proname1=data.data.Pro1;
-  this.proname2=data.data.Pro2;
-  this.proname3=data.data.Pro3;
-  this.proname4=data.data.Pro4;
-  this.proContent1=data.data.ProContent1;
-  this.proContent2=data.data.ProContent2;
-  this.proContent3=data.data.ProContent3;
-  this.proContent4=data.data.ProContent4;
+
+  this.results=resp.json().data;
+  this.imagesBeforeSplit= this.results;
+  this.ChunkedImages=_.chunk((this.results), 4);
+    this.items=this.ChunkedImages[0];
+
+  this.Portfolio=data.Portfolio.Portfolio;
+  this.PortfolioTitle=data.Portfolio.PortfolioTitle;
+  this.BackgroundColor=data.Portfolio.BackgroundColor;
+  this.colorwordsPortfolio=data.Portfolio.colorwordsPortfolio;
+  this.ShowMoreBorderColor=data.Portfolio.ShowMoreBorderColor;
+  this.ShowMoreColor=data.Portfolio.ShowMoreColor;
+  this.imageCard=data.Portfolio.imageCard;
+  this.PortfolioContent=data.Portfolio.PortfolioContent;
+  this.PortfolioHeader=data.Portfolio.PortfolioHeader
+
+
 })
+loading.dismiss();
+  }
+  OnPressShowMore(){
+    let data=[];
+
+
+
+      for (let index = 0; index < this.ChunkedImages.length; index++) {
+
+
+
+       if(this.items==this.ChunkedImages[index]){
+
+         data.push( this.ChunkedImages[index+1])
+
+      this.items.push.apply(this.items, data[0])
+      this.ChunkedImages=[this.items,this.ChunkedImages[index+2]];
+
+
+
+
+
+       }
+
+      }
+
+      if( this.items.length == this.imagesBeforeSplit.length  ){
+        this.isValid=true;
+
+        }
+
+
+     }
+
+
+     isValidForm() {
+      return this.isValid=true;
+    }
+
   }
 
-}

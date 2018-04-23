@@ -1,14 +1,21 @@
-{
-  "data": {
+
+   {
+    "ContactTitle":"Contact",
+    "Button":"Location",
+    "icon":"pin",
+    "image":"assets/imgs/background.png",
+    "colorForCard":"white",
+    "backgroundcolorButton": "white",
+    "colorForEmpty":"rgb(1, 37, 51)",
     "Contact": "Some Word From The Futer",
     "ContactHeader": "Some Word ",
     "ContactContent":
       "Any Words Any Words Any WordsAny WordsAny WordsAny WordsAny WordsAny WordsAny Words ",
-
+"OurAddress":"Our Address",
     "Address":
       "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
     "Location": "2 Elsodan Street, Ad Dakrour, Giza .",
     "Telephone": "+20 1033834556",
     "Email": "contact@midrule.com"
   }
-}
+

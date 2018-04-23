@@ -14,7 +14,7 @@ export class HomePage {
     setTimeout(() => {
         // this.navCtrl.popToRoot();
         // might try this instead
-        this.navCtrl.setRoot(MenuPage);
+
     }, 2500);
   }
 }

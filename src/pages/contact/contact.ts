@@ -1,7 +1,9 @@
 import { Component ,OnInit} from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams ,LoadingController } from 'ionic-angular';
 import {MapPage} from '../map/map'
-import {JsonService} from '../JsonService/JsonService'
+import {ContactService} from './ContactService'
+import { SendMessagePage } from '../send-message/send-message';
+import {location} from '../general-map/general-map'
 /**
  * Generated class for the ContactPage page.
  *
@@ -15,6 +17,7 @@ import {JsonService} from '../JsonService/JsonService'
   templateUrl: 'contact.html',
 })
 export class ContactPage {
+
   Contact:any
   address:any
 
@@ -23,29 +26,53 @@ export class ContactPage {
   Location:any;
   Telephone:any;
   Email:any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public ds:JsonService) {
+  ButtonLocation:any;
+  OurAddress:any;
+  ContactTitle:any;
+  icon:any;
+  image:any;
+  colorForCard:any;
+  backgroundcolorButton:any;
+  colorForEmpty:any;
+  SendMessageButton:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public ds:ContactService ,
+    public loadingCtrl:LoadingController) {
   }
 ngOnInit(){
-
+  let loading = this.loadingCtrl.create({content : "please wait..."});
+  loading.present();
 this.ds.FileContact().subscribe((Resp)=>{
   console.log(Resp.json());
 
-  this.address=Resp.json().data.Address;
-  this.Contact=Resp.json().data.Contact;
- this.Email=Resp.json().data.Email;
- this.ContactContent=Resp.json().data.ContactContent;
- this.ContactHeader=Resp.json().data.ContactHeader;
- this.Location=Resp.json().data.Location;
- this.Telephone=Resp.json().data.Telephone;
-  debugger;
-})
+  this.address=Resp.json().Address;
+  this.Contact=Resp.json().Contact;
+ this.Email=Resp.json().Email;
+ this.ContactContent=Resp.json().ContactContent;
+ this.ContactHeader=Resp.json().ContactHeader;
+ this.Location=Resp.json().Location;
+ this.Telephone=Resp.json().Telephone;
+ this.OurAddress=Resp.json().OurAddress;
+ this.ButtonLocation=Resp.json().Button;
+ this.ContactTitle=Resp.json().ContactTitle;
+ this.icon=Resp.json().icon;
+ this.image=Resp.json().image;
+this.colorForEmpty=Resp.json().colorForEmpty;
+this.SendMessageButton=Resp.json().SendMessageButton;
 
+ this.colorForCard=Resp.json().colorForCard
+ this.backgroundcolorButton=Resp.json().backgroundcolorButton
+
+})
+loading.dismiss();
 
 
 }
 OnPressLocation(){
-    this.navCtrl.setRoot(MapPage);
+    this.navCtrl.push(location);
 
+  }
+  OnPressSendMessage(){
+    this.navCtrl.push(SendMessagePage)
   }
 
 }

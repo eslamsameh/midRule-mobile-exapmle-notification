@@ -4,22 +4,39 @@
       {"Title": "Digital Marketing",
         "Content":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur voluptatibus nesciunt, est alias deleniti ipsum fuga ullam maxime repudiandae neque, ad. Maiores quis atque, culpa rem inventore vero amet praesentium, quam sint, magnam reprehenderit doloremque.",
-        "image":"http://localhost:8100/assets/imgs/webg.png"
+        "image":"assets/imgs/webg.png",
+        "colorTime":"rgb(143, 4, 4)",
+        "iconTime":"md-alarm",
+        "daysOffer":"2 day left",
+        "colorContent":"rgb(114, 112, 112)",
+        "colorTimeFont":"white"
       },
       {"Title": "Digital Marketing",
         "Content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur voluptatibus nesciunt, est alias deleniti ipsum fuga ullam maxime repudiandae neque, ad. Maiores quis atque, culpa rem inventore vero amet praesentium, quam sint, magnam reprehenderit doloremque.",
-        "image":"http://localhost:8100/assets/imgs/webg.png"
+        "image":"assets/imgs/webg.png",
+        "colorTime":"rgb(143, 4, 4)",
+        "iconTime":"md-alarm",
+        "daysOffer":"3 day left",
+        "colorContent":"rgb(114, 112, 112)",
+        "colorTimeFont":"white",
+        "colorTitle":"black"
+
+
+
       }
 
 
 
     ],
   "data": {
-"daysOffer":"2 day left",
+    "dataImage":"assets/imgs/background.png",
+
     "offerHeader": "Some Word From the Futer",
     "offer": "Some Words",
     "offerContent":
-      "Any Words Any Words Any Words Any Words Any Words Any Words Any Words Any Words "
+      "Any Words Any Words Any Words Any Words Any Words Any Words Any Words Any Words ",
+      "ColorData":"white",
+      "OfferTitle":"Offer"
 
 
   }

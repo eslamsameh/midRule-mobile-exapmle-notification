@@ -1,0 +1,25 @@
+<ion-icon style="margin-left:5px;
+
+" name="ios-arrow-down-outline" (click)="OnPressMoreOffers()"></ion-icon>
+
+<ion-list style=" margin-bottom: 0px;
+padding-bottom: 0px; " *ngIf="visable">
+  <ion-item>
+      <button style=" margin: 0px;
+      padding: 0px;
+      border: 0px ;border-bottom:1px  solid rgb(204, 202, 202) ; color: rgb(1, 37, 51)"  ion-item menuClose
+      (click)="OnPressOffers()" >
+        All Offers
+        </button>
+        <button style=" margin: 0px;
+        padding: 0px;
+        border: 0px; color: rgb(1, 37, 51)"  ion-item menuClose
+        (click)="OnPressNearOffers()" >
+        Near Offers
+          </button>
+  </ion-item>
+
+
+
+</ion-list>
+

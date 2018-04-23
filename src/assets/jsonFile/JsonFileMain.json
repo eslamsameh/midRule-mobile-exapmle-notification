@@ -1,6 +1,8 @@
-{"data":{
+{
 
-
+"Home":"Home",
+"Logo":"assets/imgs/logo.png",
+"imageCard":"assets/imgs/background.png",
   "BriefHeader":"Some Word From the Futer",
   "Brief":"Some Words.",
   "Services":"Services",
@@ -8,7 +10,26 @@
 "BriefContent":"any Word anyany Word anyany Word anyany Word anyany Word anyany Word anyany Word ",
 "address":"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
 "Location":"2 Elsodan Street, Ad Dakrour, Giza .",
+"iconLocation":"pin",
 "Telephone":"+20 1033834556",
-"Email":"contact@midrule.com"
+"iconTelephone":"call",
+"Email":"contact@midrule.com",
+"iconEmail":"mail",
+"ButtonAboutInCard":"About Us",
+"ButtonServiceOutCard":"Services",
+"IconService":"construct",
+"ButtonContactOutCard":"Contact Us",
+"IconContact":"mail",
+"ButtonAboutOutCard":"About",
+"IconAbout":"alert",
+"imageSendMessage":"/assets/imgs/connect.png",
+"SendMessageButton":"Send Message",
+"SendMessageIcon":"ios-chatbubbles",
+"OurAddress":"Our Address",
+"colorwhite":"white",
+"colorIconAndOutCard":"rgb(1, 37, 51)",
+"LocationBtn":"Location"
+
+
 }
-}
+

@@ -1,36 +1,37 @@
 {
-  "data":{"imagesLoad":[
+  "Gallery": {
+    "Gallery": "Gallery",
+    "GalleryTitle": "Some Word From The Futer",
+    "GalleryHeader": "Some Word",
+    "GalleryContent":
+      "Any Words Any Words Any WordsAny WordsAny WordsAny WordsAny WordsAny WordsAny Words",
+    "ButtonShowMore": "Show More",
+    "image": "assets/imgs/background.png",
+    "ColorGalleryCard": "white",
+    "ButtonShowMoreColor": "rgb(1, 37, 51)",
+    "ButtonShowMoreBorderColor": "rgb(1, 37, 51)",
+    "backgroundColor": "rgb(230, 227, 227)"
+  },
+  "data": {
+    "imagesLoad": [
+      "assets/imgs/background.png",
 
-    "http://localhost:8100/assets/imgs/background.png",
+      "assets/imgs/background.png",
 
-    "http://localhost:8100/assets/imgs/background.png",
+      "assets/imgs/background.png",
 
-    "http://localhost:8100/assets/imgs/background.png",
+      "assets/imgs/background.png",
 
-    "http://localhost:8100/assets/imgs/background.png",
+      "assets/imgs/background.png",
 
-  "http://localhost:8100/assets/imgs/background.png",
+      "assets/imgs/background.png",
 
-      "http://localhost:8100/assets/imgs/background.png",
+      "assets/imgs/background.png",
+      "assets/imgs/background.png",
 
-
-      "http://localhost:8100/assets/imgs/background.png",
-      "http://localhost:8100/assets/imgs/background.png",
-
-            "http://localhost:8100/assets/imgs/background.png",
-            "http://localhost:8100/assets/imgs/background.png",
-            "http://localhost:8100/assets/imgs/background.png"
-
-
-
-
-
-
-
-
-
-
-  ]
+      "assets/imgs/background.png",
+      "assets/imgs/background.png",
+      "assets/imgs/background.png"
+    ]
   }
 }
-

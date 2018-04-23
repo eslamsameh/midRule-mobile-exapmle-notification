@@ -6,21 +6,21 @@ page-contact {
      margin-right: 0px;
     width:100%;
     background-size: cover  ;
-     background-image: url('../../assets/imgs/background.png' );
+
   }
   #h2Header{
-    color:white
+
   }
   #h6Content{
-    color:white; font-size: 10px;
+     font-size: 10px;
   }
   #divLocation{
     display: flex;justify-content: center; margin: 10px;
   }
   #BtnDiv{
     border-radius: 15px; align-items: center;
-    color: rgb(1, 37, 51);
-    background-color: white;
+
+
     text-transform: none;
     font-size:1.3rem;
      font-family: Raleway-Regular
@@ -46,5 +46,15 @@ page-contact {
      color: rgb(1, 37, 51);
      white-space:inherit;
   }
+  #divButtonSendMessage{
+    display: flex;
+    justify-content: center;
 
+  }
+  #BtnSendMessage{
+height: 30px;
+    width: 70%;
+border-radius: 30px;
+
+  }
   }

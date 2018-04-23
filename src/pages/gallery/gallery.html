@@ -4,45 +4,54 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header >
-    <ion-navbar >
+
+
+<ion-header>
+
+  <ion-toolbar hideBackButton>
+      <ion-title>{{Gallery}}</ion-title>
       <ion-buttons start>
-        <button ion-button menuToggle>
+          <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-      </ion-buttons>
-      <ion-title>Gallery</ion-title>
+        </ion-buttons>
+  </ion-toolbar>
 
-    </ion-navbar>
+
+
+
   </ion-header>
 
-<ion-content  style="margin: 0px; padding: 0px; background-color: rgb(230, 227, 227) " >
+<ion-content  style="margin: 0px; padding: 0px; " [style.backgroundColor]="backgroundColor" >
 
 
-      <ion-card id="ionCard" >
-         <div>
+      <ion-card [ngStyle]="{'background-image':'url(' + image + ')'}" id="ionCard" >
+         <div >
             <ion-card-header>
-                <h2 id="ionCardHeader">Some Word From The Futer</h2>
-                <h2  id="ionCardHeader">Some Word</h2>
+                <h2 [style.color]="ColorGalleryCard" id="ionCardHeader">{{GalleryTitle}}</h2>
+                <h2 [style.color]="ColorGalleryCard" id="ionCardHeader">{{GalleryHeader}}</h2>
               </ion-card-header>
               <ion-card-content id="ionCardConent">
-                <h6 id="h6Content">Any Words Any Words Any WordsAny WordsAny WordsAny WordsAny WordsAny WordsAny Words </h6>
+                <h6 [style.color]="ColorGalleryCard" id="h6Content"> {{GalleryContent}}</h6>
               </ion-card-content>
          </div>
       </ion-card>
-
+<ion-grid>
+  <ion-row></ion-row>
+</ion-grid>
 
 <ion-grid>
-  <ion-row >
-    <ion-col  *ngFor="let x of images" col-6>
-<img style="height: 120px; width: 180px;" [src]=  x  />
+  <ion-row>
+    <ion-col id="ColImeges"  *ngFor="let x of images" col-6>
+
+<img (click)="imageView(x)" style="height: 120px; width: 180px;" [src]= x  />
     </ion-col>
 
 
   </ion-row>
 </ion-grid>
-<div style="display: flex;justify-content: center">
-    <button [disabled]="isValid"  ion-button outline (click)="OnPressShowMore()" id="ButtonShowMore"  > Show More</button>
+<div style="display: flex;justify-content: center;margin-bottom: 15px;">
+    <button [style.color]="ButtonShowMoreColor" [style.border-color]="ButtonShowMoreBorderColor" [disabled]="isValid"  ion-button outline (click)="OnPressShowMore()" id="ButtonShowMore"  > {{ButtonShowMore}}</button>
 </div>
 
 </ion-content>

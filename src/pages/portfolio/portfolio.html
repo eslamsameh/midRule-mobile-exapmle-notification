@@ -4,45 +4,58 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header >
-    <ion-navbar >
-      <ion-buttons start>
+
+<ion-header>
+
+<ion-toolbar hideBackButton>
+    <ion-title>{{Portfolio}}</ion-title>
+    <ion-buttons start>
         <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
+        <ion-icon name="menu"></ion-icon>
+      </button>
       </ion-buttons>
-      <ion-title>Portfolio</ion-title>
-
-    </ion-navbar>
-  </ion-header>
-
-<ion-content  style="margin: 0px; padding: 0px; background-color: rgb(230, 227, 227) " >
+</ion-toolbar>
 
 
-      <ion-card id="ionCard" >
-         <div>
-            <ion-card-header >
-                <h2 id="ionCardHeader">Some Word From The Futer</h2>
-                <h2  id="ionCardHeader">Some Word</h2>
+
+</ion-header>
+
+<ion-content [style.backgroundColor]="BackgroundColor"  style="margin: 0px; padding: 0px;  " >
+
+
+      <ion-card [ngStyle]="{'background-image':'url(' + imageCard + ')'}" id="ionCard" justify-content-center>
+         <div >
+            <ion-card-header   >
+                <h2 [style.color]="colorwordsPortfolio" id="ionCardHeader">{{PortfolioTitle}}</h2>
+                <h2 [style.color]="colorwordsPortfolio" id="ionCardHeader">{{PortfolioHeader}}</h2>
               </ion-card-header>
               <ion-card-content id="ionCardConent">
-                <h6 id="h6Content">Any Words Any Words Any WordsAny WordsAny WordsAny WordsAny WordsAny WordsAny Words </h6>
+                <h6 [style.color]="colorwordsPortfolio" id="h6Content">{{PortfolioContent}} </h6>
               </ion-card-content>
          </div>
       </ion-card>
 
 
 <ion-grid>
-  <ion-row >
-    <ion-col  col-6>
+  <ion-row *ngFor="let x of items" >
+    <ion-col >
 <ion-card >
   <ion-card-header style="padding: 0px;" >
-<img style="height: 100px; width: 180px;" src="../../assets/imgs/background.png"/>
+<img style="height: 200px; width:100%;" src="{{x.image}}"/>
   </ion-card-header>
-  <ion-card-content style="background-color: rgb(1, 37, 51); margin: 0px;" >
-<h6 style="margin: 0px; color: white">
-    fancy 3d1
-</h6>
+  <ion-card-content style="margin: 0px; margin-bottom:10px; padding :3px;"  [style.backgroundColor]="x.CardContentColor" >
+    <div>
+
+    </div>
+<h1 style="margin: 5px; font-family: Raleway"  [style.color]="x.WordContentColor">
+   {{x.CardTitle}}
+</h1>
+<div>
+
+</div>
+<div>
+<h6   [style.color]="x.colorContent" style=" margin: 5px;font-size:14px; ">  {{x.CardContent}} </h6>
+</div>
   </ion-card-content>
 </ion-card>
     </ion-col>
@@ -50,8 +63,8 @@
 
   </ion-row>
 </ion-grid>
-<div style="display: flex;justify-content: center">
-    <button [disabled]="isValid"  ion-button outline (click)="OnPressShowMore()" id="ButtonShowMore"  > Show More</button>
+<div style=" display: flex;justify-content: center; margin-bottom:20px;" >
+    <button [style.color]="ShowMoreColor" [style.border-color]="ShowMoreBorderColor" [disabled]="isValid"  ion-button outline (click)="OnPressShowMore()" id="ButtonShowMore"  > Show More</button>
 </div>
 
 </ion-content>

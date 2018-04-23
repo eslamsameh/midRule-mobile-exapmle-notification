@@ -4,34 +4,47 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
+
 <ion-header>
-  <ion-navbar>
-    <ion-buttons start>
-      <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    </ion-buttons>
-    <ion-title>Services</ion-title>
-  </ion-navbar>
-</ion-header>
+
+      <ion-toolbar hideBackButton>
+          <ion-title>Offers</ion-title>
+          <ion-buttons start>
+              <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+            </ion-buttons>
+      </ion-toolbar>
+
+
+
+
+  </ion-header>
 
 <ion-content id="ionContent"  >
 
     <ion-card style="display: flex;
-    align-items: center;height: 200px;" id="ionCardService" >
+    align-items: center;height: 200px;" id="ionCardService" [ngStyle]="{'background-image':'url(' + dataImage + ')'}" >
       <div>
       <ion-card-header  id="iconCardHeaderService" >
-        <h2 id="H2ServiceHeader" >{{offerHeader}}</h2>
-        <h2 id="h2Service" >{{offer}}</h2>
+        <h2 [style.color]="ColorData" id="H2ServiceHeader" >{{offerHeader}}</h2>
+        <h2 [style.color]="ColorData" id="h2Service" >{{offer}}</h2>
 
       </ion-card-header>
       <ion-card-content id="ionCardConent" >
 
-        <h6 id="h6ServiceContent" > {{offerContent}} </h6>
+        <h6 [style.color]="ColorData" id="h6ServiceContent" > {{offerContent}} </h6>
       </ion-card-content>
     </div>
+
     </ion-card  >
-    <ion-card *ngFor="let x of items" id="ionCardDetail"  >
+    <div *ngFor="let x of items | mapToIterable " style=" margin-bottom: 30px;" >
+      <div  style="padding-left :10px;" >
+         <h1> {{x.key}}</h1>
+      </div>
+
+    <ion-card  id="ionCardDetail"  >
       <ion-card-header style="margin-top: 0px;
       margin-left: 0px;
       margin-right: 0px;
@@ -41,39 +54,43 @@
       background-size: cover  ;
 
 
-      " [ngStyle]="{'background-image':'url(' + x.image + ')'}" >
+      " [ngStyle]="{'background-image':'url(' + x.val.image + ')'}" >
+
 
 
       </ion-card-header >
       <ion-card-title style="padding-bottom: 0px; padding-top: 0px;">
           <ion-grid  >
               <ion-row>
-                <ion-col style="margin-left: 0px;padding-left: 10px;" col-8 >
-                    <h2  > {{x.Title}}</h2>
+                <ion-col [style.color]="x.val.colorTitle"
+                style="margin-left: 0px;padding-left: 10px;" col-8 >
+                    <h2  > {{x.val.Title}}</h2>
                 </ion-col>
                 <ion-col   col-4>
-                    <h6  style="color:white; font-size: 13px;  display: flex;
+                    <h6  [style.backgroundColor]="x.colorTime" [style.color]="x.val.colorTimeFont"
+                    style=" font-size: 13px;  display: flex;
                     text-align: center;align-items: center;
-                    background-color: rgb(143, 4, 4);height: 20px;width: 90px; padding-left: 10px; border-radius: 3px;" >
-                        <ion-icon name="md-alarm" style="color:white ; margin-right: 6px;"></ion-icon>
-                     {{daysOffer}}</h6>
+                   height: 20px;width: 90px; padding-left: 10px; border-radius: 3px;" >
+                        <ion-icon name="md-alarm" [style.color]="x.val.colorTimeFont"
+                        style=" margin-right: 6px;"></ion-icon>
+                     {{x.val.daysOffer}}</h6>
                 </ion-col>
               </ion-row>
             </ion-grid>
       </ion-card-title>
-      <ion-card-content style="padding-top: 0px;" >
+      <ion-card-content  style="padding-top: 0px;" >
 
 
 
-                  <h6 id="H6ContentService" >
+                  <h6 [style.color]="x.val.colorContent" id="H6ContentService" >
 
-                     {{x.Content}}</h6>
+                     {{x.val.Content}}</h6>
 
 
 
 
       </ion-card-content>
     </ion-card>
-
+  </div>
 
 </ion-content>

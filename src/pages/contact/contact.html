@@ -1,50 +1,56 @@
-<ion-header>
-    <ion-navbar>
-      <ion-buttons start>
-        <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      </ion-buttons>
-      <ion-title>Contact</ion-title>
-    </ion-navbar>
-  </ion-header>
 
+
+<ion-header>
+
+  <ion-toolbar hideBackButton>
+      <ion-title>{{ContactTitle}}</ion-title>
+      <ion-buttons start>
+          <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        </ion-buttons>
+  </ion-toolbar>
+
+
+
+
+  </ion-header>
   <ion-content  >
 
-    <ion-card  id="ionCard">
+    <ion-card   [ngStyle]="{'background-image':'url(' + image + ')'}" id="ionCard">
       <ion-card-header>
-        <h2 id="h2Header" >{{Contact}}</h2>
-        <h2  id="h2Header" >{{ContactHeader}}</h2>
+        <h2 [style.color]="colorForCard" id="h2Header" >{{Contact}}</h2>
+        <h2  [style.color]="colorForCard" id="h2Header" >{{ContactHeader}}</h2>
 
       </ion-card-header>
       <ion-card-content>
-          <h6 id="h6Content"> {{ContactContent}} </h6>
+          <h6 [style.color]="colorForCard" id="h6Content"> {{ContactContent}} </h6>
           <div id="divLocation" >
-              <button id="BtnDiv" small ion-button (click)="OnPressLocation()" >
-               <ion-icon id="icon"  name="pin"></ion-icon>
-              Location</button>
+              <button id="BtnDiv" [style.backgroundColor]="backgroundcolorButton" [style.color]="colorForEmpty" small ion-button (click)="OnPressLocation()" >
+               <ion-icon id="icon" [style.color]="colorForEmpty"  name={{icon}}></ion-icon>
+              {{ButtonLocation}}</button>
             </div>
          </ion-card-content>
          </ion-card>
          <ion-grid>
             <ion-row>
-              <h4 id="h4Row" > Our Address</h4>
+              <h4 id="h4Row"  [style.color]="colorForEmpty"  > {{OurAddress}}</h4>
               <ion-col id="colempty" col-1  >
 
               </ion-col>
               <ion-col id="coladdress" col-11 >
 
-                <p id="pEndOfPage">
+                <p  [style.color]="colorForEmpty" id="pEndOfPage">
                   {{address}}
                 </p>
                 <p></p>
-                <p  id="pEndOfPage" >
+                <p  [style.color]="colorForEmpty" id="pEndOfPage" >
                   <ion-icon id="icon"  name="pin">
                   </ion-icon> {{Location}} </p>
-                <p id="pEndOfPage">
+                <p  [style.color]="colorForEmpty" id="pEndOfPage">
                   <ion-icon id="icon" name="call">
                   </ion-icon> {{Telephone}} </p>
-                <p id="pEndOfPage">
+                <p  [style.color]="colorForEmpty" id="pEndOfPage">
                   <ion-icon id="icon" name="mail">
                   </ion-icon> {{Email}} </p>
 
@@ -53,4 +59,7 @@
 
             </ion-row>
             </ion-grid>
+            <div id="divButtonSendMessage" >
+              <button (click)="OnPressSendMessage()" outline style="text-transform: none" [style.borderColor]="colorForEmpty" [style.color]="colorForEmpty" ion-button id="BtnSendMessage"> {{SendMessageButton}} </button>
+            </div>
   </ion-content>

@@ -6,25 +6,28 @@ page-gallery {
      margin-right: 0px;
     width:100%;
     background-size: cover  ;
-     background-image: url('../../assets/imgs/background.png' );
+
      display: flex;
      align-items: center;height: 200px;
   }
   #ionCardHeader{
-    color:white
+
   }
   #h6Content{
-    color:white; font-size: 10px;
+     font-size: 10px;
   }
   #ionCardConent{
     margin-top: 0px;
   }
   #ButtonShowMore{
-    color:rgb(1, 37, 51); border-color: rgb(1, 37, 51);
+
     border-radius: 40px;
     text-transform: none;
      height: 30px;width: 150px;
      font-family: Raleway-Bold;
      font-size: 13px;
+  }
+  #ColImeges{
+
   }
 }

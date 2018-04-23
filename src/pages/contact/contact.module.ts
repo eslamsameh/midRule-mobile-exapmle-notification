@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ContactPage } from './contact';
 
+
 @NgModule({
   declarations: [
     ContactPage,
@@ -10,5 +11,6 @@ import { ContactPage } from './contact';
     IonicPageModule.forChild(ContactPage),
 
   ],
+
 })
 export class ContactPageModule {}
